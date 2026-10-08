@@ -1,0 +1,14 @@
+#!/bin/sh
+# The binary is the validated robopi-wifi implementation, distributed as robowifi.bin.
+if [ "$#" -eq 0 ] || [ "$1" = "--help" ]; then
+  echo 'robowifi status|disconnect|connect --ssid NAME [--password-stdin|--open]|reconnect NETWORK_ID'
+  [ "$#" -gt 0 ] && exit 0
+  exit 2
+fi
+# Resolve the launcher whether invoked by full path, relative path, or PATH.
+robopi_wifi_launcher=$(command -v "$0") || exit 2
+robopi_wifi_launcher=$(readlink -f "$robopi_wifi_launcher") || exit 2
+robopi_wifi_dir=${robopi_wifi_launcher%/*}
+unset LD_PRELOAD
+export LD_LIBRARY_PATH=/system/lib64/platformsdk:/system/lib64/chipset-pub-sdk:/system/lib64:/vendor/lib64
+exec "$robopi_wifi_dir/robowifi.bin" "$@"

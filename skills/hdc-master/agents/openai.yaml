@@ -1,0 +1,4 @@
+interface:
+  display_name: "hdc-master"
+  short_description: "Connect and debug OpenHarmony devices with HDC"
+  default_prompt: "Use $hdc-master to inspect or debug my OpenHarmony device through HDC."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "oh-houmo"
+  short_description: "Deploy and validate Houmo NPUs on OpenHarmony"
+  default_prompt: "Use $oh-houmo to inspect, deploy, or validate my Houmo NPU on OpenHarmony."

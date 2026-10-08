@@ -1,0 +1,4 @@
+interface:
+  display_name: "RoboPi Wi-Fi"
+  short_description: "通过原生 Wi-Fi 服务部署、连接和诊断 RoboPi 局域网"
+  default_prompt: "使用 $robopi-wifi 部署 robowifi 并连接或诊断 RoboPi 的原生 Wi-Fi 网络。"

@@ -1,0 +1,19 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Generated output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+build/
+artifacts/
+*.log
+
+# Editor and OS files
+.DS_Store
+*~

@@ -1,0 +1,3 @@
+interface:
+  display_name: "oh-ros2"
+  short_description: "Develop and validate ROS 2 on OpenHarmony"
